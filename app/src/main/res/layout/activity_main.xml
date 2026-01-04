@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black">
+    android:background="@android:color/black"
+    android:fitsSystemWindows="true">  <!-- This handles status + nav bar -->
 
-    <!-- Scrollable container with momentum/fling support -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        android:scrollbars="vertical">
+        android:paddingBottom="0dp">  <!-- Safe buffer for navigation bar -->
 
         <EditText
             android:id="@+id/editText"
@@ -22,8 +21,7 @@
             android:textColor="#FFFFFF"
             android:textColorHint="#888888"
             android:padding="16dp"
-            android:textSize="18sp"
-            android:scrollbars="vertical" />
+            android:textSize="18sp" />
 
     </androidx.core.widget.NestedScrollView>
     <!-- Three-dot menu button in top-right -->
