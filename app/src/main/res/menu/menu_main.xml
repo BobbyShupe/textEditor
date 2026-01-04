@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_new"
+        android:title="New" />
+    <item
+        android:id="@+id/action_open"
+        android:title="Open" />
+    <item
+        android:id="@+id/action_save"
+        android:title="Save" />
+    <item
+        android:id="@+id/action_read_only"
+        android:title="Read-only"
+        android:checkable="true" />  <!-- Important: makes it checkable -->
+</menu>

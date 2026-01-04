@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <!-- Scrollable container with momentum/fling support -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|start"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:background="@android:color/transparent"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:padding="16dp"
+            android:textSize="18sp"
+            android:scrollbars="vertical" />
+
+    </androidx.core.widget.NestedScrollView>
+    <!-- Three-dot menu button in top-right -->
+    <ImageButton
+        android:id="@+id/menuButton"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:srcCompat="@android:drawable/ic_menu_more"
+        android:scaleType="center"
+        android:contentDescription="@string/more_options"
+        app:tint="#FFFFFF" />
+
+</FrameLayout>
